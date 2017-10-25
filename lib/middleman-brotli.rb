@@ -1,6 +1,6 @@
 require "middleman-core"
 
-Middleman::Extensions.register :middleman-brotli do
-  require "my-extension/extension"
-  MyExtension
+Middleman::Extensions.register :brotli do
+  require "middleman-brotli/extension.rb"
+  Middleman::Brotli
 end

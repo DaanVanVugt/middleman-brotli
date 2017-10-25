@@ -2,7 +2,7 @@
 require 'middleman-core'
 
 # Extension namespace
-class Brotli < ::Middleman::Extension
+class Middleman::Brotli < ::Middleman::Extension
   option :exts, %w(.css .htm .html .js .svg .xhtml .otf .woff .ttf .woff2), 'File extensions to compress when building.'
   option :ignore, [], 'Patterns to avoid compressing'
   option :overwrite, false, 'Overwrite original files instead of adding .br extension.'
@@ -93,7 +93,7 @@ class Brotli < ::Middleman::Extension
 
   private
 
-  # Whether a path should be gzipped
+  # Whether a path should be brotli'd
   # @param [Pathname] path A destination path
   # @return [Boolean]
   Contract Pathname => Bool
